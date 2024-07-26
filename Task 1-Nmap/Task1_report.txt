@@ -1,0 +1,51 @@
+Task 1: Basic Network Scanning with Nmap
+
+Date and Time: Fri Jul 26 22:49:12 2024
+IP range: 192.168.1.0/24
+
+Scan command: nmap -sV -sC 192.168.1.0/24 -oN nmap_scan_report.txt
+scan type: Version Detection Scan and Default Script Scan
+
+Discovered Hosts
+Host 1:
+-IP address:192.168.1.1
+-Host is up (0.0059s latency).
+-Open Ports:
+21/tcp(ftp), 22/tcp(ssh), 53/tcp(domain), 80/tcp(http), 443/tcp(ssl/http)
+-Services and Versions:
+FTP: GNU Inetutils FTPd 1.4.1
+SSH: Dropbear sshd 0.48
+DNS: dnsmasq 2.45
+HTTP: Boa HTTPd 0.93.15
+HTTPS: Boa HTTPd 0.93.15
+-Device Type: Router
+
+Host 2:
+-IP address:192.168.1.37
+-Host is up (0.017s latency).
+-Open Ports:
+80/tcp(http), 8008/tcp(http), 8009/tcp(ssl/castv2), 8443/tcp(ssl/https), 9000/tcp(ssl/cslistener), 9080/tcp(glrpc)
+-Services and Version:
+HTTP:  nginx
+Device Type: webapp
+
+Host 3:
+-IP address:192.168.1.45
+-Host is up (0.0079s latency).
+-Open Ports:
+443/tcp(ssl), 554/tcp(rtsp), 2020/tcp(soap), 8800/tcp
+-Services and Version:
+HTTPS: Nagios NSCA
+SOAP: gSOAP 2.8
+-Device Type: Router
+
+Host 4:
+-IP address:192.168.1.110
+-Host is up (0.014s latency).
+-Open Ports:
+80/tcp(http), 554/tcp(rtsp), 8000/tcp(ipcam), 9010/tcp(sdr)
+-Services and Version:
+HTTP: HikVision NVR or camera http config
+RTSP: Apple AirTunes rtspd
+-Device Type: HikVision network camera
+

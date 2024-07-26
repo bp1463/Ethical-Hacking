@@ -1,0 +1,165 @@
+# Nmap 7.95 scan initiated Fri Jul 26 22:49:12 2024 as: nmap -sV -sC -oN nmap_scan_report.txt 192.168.1.0/24
+Nmap scan report for Earth-2022.bbrouter (192.168.1.1)
+Host is up (0.0059s latency).
+Not shown: 995 filtered tcp ports (no-response)
+PORT    STATE SERVICE  VERSION
+21/tcp  open  ftp      GNU Inetutils FTPd 1.4.1
+| ftp-syst: 
+|   SYST: Version: Linux 4.4.140
+|   STAT: 
+|  Earth-2022 FTP server status:
+|      ftpd (GNU inetutils) 1.4.1
+|      Connected to  (::ffff:192.168.1.33)
+|      Waiting for user name
+|      TYPE: ASCII, FORM: Nonprint; STRUcture: File; transfer MODE: Stream
+|      No data connection
+|_End of status
+22/tcp  open  ssh      Dropbear sshd 0.48 (protocol 2.0)
+| ssh-hostkey: 
+|_  1040 d0:0d:e9:4e:24:4c:41:86:e9:62:32:5c:24:de:3e:4f (RSA)
+53/tcp  open  domain   dnsmasq 2.45
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.45
+80/tcp  open  http     Boa HTTPd 0.93.15
+|_http-server-header: Boa/0.93.15
+| http-title: Site doesn't have a title (text/html).
+|_Requested resource was /admin/login.asp
+443/tcp open  ssl/http Boa HTTPd 0.93.15
+|_ssl-date: 2024-07-26T17:17:52+00:00; -4m18s from scanner time.
+|_http-server-header: Boa/0.93.15
+| ssl-cert: Subject: commonName=192.168.1.1/organizationName=realtek/stateOrProvinceName=Jiangsu/countryName=CN
+| Not valid before: 2010-11-08T07:31:59
+|_Not valid after:  2035-06-30T07:31:59
+| http-title: Site doesn't have a title (text/html).
+|_Requested resource was /admin/login.asp
+Service Info: Host: Earth-2022; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: -4m18s
+
+Nmap scan report for 192.168.1.37
+Host is up (0.021s latency).
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE SERVICE         VERSION
+80/tcp   open  http            nginx
+|_http-title: Did not follow redirect to http://192.168.1.37:10000/contentshare/WebApp/index.html
+8008/tcp open  http?
+|_http-title: Site doesn't have a title (text/html).
+8009/tcp open  ssl/castv2      Ninja Sphere Chromecast driver
+|_ajp-methods: Failed to get a valid response for the OPTION request
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=7ddec319-0c4a-18f8-59a3-c3e34b69c795
+| Not valid before: 2024-07-25T22:38:10
+|_Not valid after:  2024-07-27T22:38:10
+8443/tcp open  ssl/https-alt?
+| ssl-cert: Subject: commonName=7412162684798958041/organizationName=Google Inc/stateOrProvinceName=Washington/countryName=US
+| Not valid before: 2021-12-26T11:37:07
+|_Not valid after:  2041-12-26T11:37:07
+|_http-title: Site doesn't have a title (text/html).
+9000/tcp open  ssl/cslistener?
+9080/tcp open  glrpc?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Fri, 26 Jul 2024 22:46:15 IST
+|     Server: NRDP/2024.1.3.0
+|     Connection: close
+|     Cache-Control: no-cache
+|     Content-Length: 9
+|     status=ok
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Fri, 26 Jul 2024 22:45:30 IST
+|     Server: NRDP/2024.1.3.0
+|     Connection: close
+|     Cache-Control: no-cache
+|     Content-Length: 9
+|_    status=ok
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9080-TCP:V=7.95%I=7%D=7/26%Time=66A3DAB2%P=i686-pc-windows-windows%
+SF:r(GetRequest,99,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Fri,\x2026\x20Jul\x
+SF:202024\x2022:45:30\x20IST\r\nServer:\x20NRDP/2024\.1\.3\.0\r\nConnectio
+SF:n:\x20close\r\nCache-Control:\x20no-cache\r\nContent-Length:\x209\r\n\r
+SF:\nstatus=ok")%r(FourOhFourRequest,99,"HTTP/1\.0\x20200\x20OK\r\nDate:\x
+SF:20Fri,\x2026\x20Jul\x202024\x2022:46:15\x20IST\r\nServer:\x20NRDP/2024\
+SF:.1\.3\.0\r\nConnection:\x20close\r\nCache-Control:\x20no-cache\r\nConte
+SF:nt-Length:\x209\r\n\r\nstatus=ok");
+
+Nmap scan report for C210_82A92E.bbrouter (192.168.1.45)
+Host is up (0.0079s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE         VERSION
+443/tcp  open  ssl/nagios-nsca Nagios NSCA
+| ssl-cert: Subject: commonName=TP-Link/countryName=CN
+| Not valid before: 2023-11-17T02:12:46
+|_Not valid after:  2033-09-25T02:12:46
+|_ssl-date: TLS randomness does not represent time
+|_http-title: Site doesn't have a title (text/plain).
+554/tcp  open  rtsp
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     RTSP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Fri, Jul 26 2024 17:15:51 GMT
+|   GenericLines: 
+|     RTSP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Fri, Jul 26 2024 17:15:40 GMT
+|   GetRequest: 
+|     RTSP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Fri, Jul 26 2024 17:15:30 GMT
+|   HTTPOptions: 
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Date: Fri, Jul 26 2024 17:15:46 GMT
+|     Public: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, GET_PARAMETER, SET_PARAMETER
+|   RTSPRequest: 
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Date: Fri, Jul 26 2024 17:15:35 GMT
+|     Public: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, GET_PARAMETER, SET_PARAMETER
+|   SIPOptions: 
+|     RTSP/1.0 200 OK
+|     CSeq: 42
+|     Date: Fri, Jul 26 2024 17:15:56 GMT
+|_    Public: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, GET_PARAMETER, SET_PARAMETER
+|_rtsp-methods: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, GET_PARAMETER, SET_PARAMETER
+2020/tcp open  soap            gSOAP 2.8
+|_http-server-header: gSOAP/2.8
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+8800/tcp open  sunwebadmin?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port554-TCP:V=7.95%I=7%D=7/26%Time=66A3DAB8%P=i686-pc-windows-windows%r
+SF:(GetRequest,4A,"RTSP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nDat
+SF:e:\x20Fri,\x20Jul\x2026\x202024\x2017:15:30\x20GMT\r\n\r\n")%r(RTSPRequ
+SF:est,91,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nDate:\x20Fri,\x20Jul\x2
+SF:026\x202024\x2017:15:35\x20GMT\r\nPublic:\x20OPTIONS,\x20DESCRIBE,\x20S
+SF:ETUP,\x20TEARDOWN,\x20PLAY,\x20GET_PARAMETER,\x20SET_PARAMETER\r\n\r\n"
+SF:)%r(GenericLines,4A,"RTSP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r
+SF:\nDate:\x20Fri,\x20Jul\x2026\x202024\x2017:15:40\x20GMT\r\n\r\n")%r(HTT
+SF:POptions,91,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nDate:\x20Fri,\x20J
+SF:ul\x2026\x202024\x2017:15:46\x20GMT\r\nPublic:\x20OPTIONS,\x20DESCRIBE,
+SF:\x20SETUP,\x20TEARDOWN,\x20PLAY,\x20GET_PARAMETER,\x20SET_PARAMETER\r\n
+SF:\r\n")%r(FourOhFourRequest,4A,"RTSP/1\.0\x20400\x20Bad\x20Request\r\nCS
+SF:eq:\x200\r\nDate:\x20Fri,\x20Jul\x2026\x202024\x2017:15:51\x20GMT\r\n\r
+SF:\n")%r(SIPOptions,92,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x2042\r\nDate:\x2
+SF:0Fri,\x20Jul\x2026\x202024\x2017:15:56\x20GMT\r\nPublic:\x20OPTIONS,\x2
+SF:0DESCRIBE,\x20SETUP,\x20TEARDOWN,\x20PLAY,\x20GET_PARAMETER,\x20SET_PAR
+SF:AMETER\r\n\r\n");
+
+Nmap scan report for 192.168.1.110
+Host is up (0.014s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE VERSION
+80/tcp   open  http    HikVision NVR or camera http config
+|_http-favicon: Hikvision DVR
+|_http-title: Site doesn't have a title (text/html).
+554/tcp  open  rtsp    Apple AirTunes rtspd
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+8000/tcp open  ipcam   Hikvision IPCam control port
+9010/tcp open  sdr?
+Service Info: OS: Mac OS X; Device: webcam; CPE: cpe:/o:apple:mac_os_x
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jul 26 22:52:17 2024 -- 256 IP addresses (4 hosts up) scanned in 184.56 seconds
